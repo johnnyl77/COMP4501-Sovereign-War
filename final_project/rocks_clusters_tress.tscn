@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cb6mobcdw7fel"]
+
+[ext_resource type="PackedScene" uid="uid://h0xtamqud1bc" path="res://Models/Rocks/rocks-clusters-tress.fbx" id="1_htq8h"]
+
+[node name="rocks-clusters-tress" instance=ExtResource("1_htq8h")]

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcshsn4fh5ihw"]
+
+[ext_resource type="PackedScene" uid="uid://bi1fhhp20i5n2" path="res://Models/Farm/SM_Grass_01.fbx" id="1_r87cq"]
+[ext_resource type="Material" uid="uid://bm3xymyjefj4" path="res://Models/Farm/M_Props.tres" id="2_hw128"]
+
+[node name="SM_Grass_01" instance=ExtResource("1_r87cq")]
+
+[node name="SM_Grass_01" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_hw128")

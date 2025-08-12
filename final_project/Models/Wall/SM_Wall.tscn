@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://nyjjp374m8ye"]
+
+[ext_resource type="PackedScene" uid="uid://b53dthvvwcy5o" path="res://Models/Wall/sm_Wall.fbx" id="1_gnwkx"]
+[ext_resource type="Script" path="res://building_object.gd" id="2_5r5ej"]
+[ext_resource type="Material" uid="uid://ctichbdbmvl46" path="res://Models/Wall/M_Wall.tres" id="2_hlaev"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tplyn"]
+size = Vector3(2, 0.754395, 1.31421)
+
+[node name="sm_Wall" groups=["NavCollider"] instance=ExtResource("1_gnwkx")]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("2_5r5ej")
+
+[node name="SM_WallMid" parent="." index="0"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, -2, 0, -0.37911)
+surface_material_override/0 = ExtResource("2_hlaev")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SM_WallMid" index="0"]
+transform = Transform3D(-0.02, 3.01992e-09, 2.38837e-16, -3.01992e-09, -0.02, -1.74846e-09, -2.51723e-17, -1.74846e-09, 0.02, 0.01, -0.005, 0)
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_WallMid/StaticBody3D" index="0" groups=["NavCollider"]]
+transform = Transform3D(1, -1.22213e-12, -3.38813e-21, 1.22213e-12, 1, 0, 8.30092e-20, 0, 1, -0.5, 0.122803, 0.656756)
+shape = SubResource("BoxShape3D_tplyn")

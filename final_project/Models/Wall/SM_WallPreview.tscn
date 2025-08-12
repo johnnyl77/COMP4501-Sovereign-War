@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbydrdro2k0dc"]
+
+[ext_resource type="PackedScene" uid="uid://b53dthvvwcy5o" path="res://Models/Wall/sm_Wall.fbx" id="1_rctkg"]
+[ext_resource type="Material" uid="uid://c47hanlhc5qa3" path="res://Models/Farm/M_Preview.tres" id="2_ctuj4"]
+
+[node name="sm_Wall" instance=ExtResource("1_rctkg")]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="SM_WallMid" parent="." index="0"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, -2, 0, -0.37911)
+surface_material_override/0 = ExtResource("2_ctuj4")

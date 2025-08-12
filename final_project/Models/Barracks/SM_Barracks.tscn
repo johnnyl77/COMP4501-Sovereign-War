@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://buhmeh2qmyvo5"]
+
+[ext_resource type="PackedScene" uid="uid://b65yx2hehig1k" path="res://Models/Barracks/sm_Barracks.fbx" id="1_ldncw"]
+[ext_resource type="Material" uid="uid://6ld5yeeayfse" path="res://Models/Barracks/M_Barracks.tres" id="2_c8qwq"]
+[ext_resource type="Script" path="res://building_object.gd" id="2_ej51a"]
+
+[node name="sm_Barracks" instance=ExtResource("1_ldncw")]
+script = ExtResource("2_ej51a")
+
+[node name="SM_Barracks" parent="." index="0"]
+transform = Transform3D(100, 0, 8.13152e-20, -4.23516e-20, -4.37114e-06, 100, 0, -100, -4.37114e-06, 0, 0, 0)
+surface_material_override/0 = ExtResource("2_c8qwq")
+
+[node name="UCX_SM_Barracks" parent="SM_Barracks" index="0"]
+transform = Transform3D(0.5, 0, 0, 0, 0.4, -1.42109e-14, 0, 7.10543e-15, 1, 0, 0, 0)

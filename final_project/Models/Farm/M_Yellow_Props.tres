@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://bck52ebpiqx0b"]
+
+[ext_resource type="Texture2D" uid="uid://cmt1suj24d1n0" path="res://Models/Farm/T_Props_diffuse.png" id="1_gfktp"]
+[ext_resource type="Texture2D" uid="uid://cvwwjte17qfyq" path="res://Models/Farm/T_Props_metalness.png" id="2_3h7gk"]
+[ext_resource type="Texture2D" uid="uid://h2bxjk4v3xsc" path="res://Models/Farm/T_Props_normal.png" id="3_dwbif"]
+[ext_resource type="Texture2D" uid="uid://gmql1ckj4yj3" path="res://Models/Farm/T_Props_roughness.png" id="4_72f5t"]
+
+[resource]
+albedo_color = Color(0, 4.316, 1, 1)
+albedo_texture = ExtResource("1_gfktp")
+metallic = 1.0
+metallic_texture = ExtResource("2_3h7gk")
+metallic_texture_channel = 4
+roughness_texture = ExtResource("4_72f5t")
+roughness_texture_channel = 4
+normal_enabled = true
+normal_texture = ExtResource("3_dwbif")

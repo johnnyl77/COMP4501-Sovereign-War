@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bacej7bdaohu"]
+
+[ext_resource type="PackedScene" uid="uid://cs3ljrnj1ks5o" path="res://Models/Hut/sm_Hut.fbx" id="1_jcaaa"]
+[ext_resource type="Material" uid="uid://ba3rs55xxspn6" path="res://Models/Hut/M_Hut.tres" id="2_rx2so"]
+[ext_resource type="Script" path="res://building_object.gd" id="2_y5wou"]
+
+[node name="sm_Hut" instance=ExtResource("1_jcaaa")]
+script = ExtResource("2_y5wou")
+
+[node name="SM_Hut" parent="." index="0"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, 0, 0, 0)
+surface_material_override/0 = ExtResource("2_rx2so")
+
+[node name="UCX_SM_Hut" parent="SM_Hut" index="0"]
+transform = Transform3D(0.32, 0, 0, 0, 0.8, -1.42109e-14, 0, 2.13163e-14, 0.32, 0, 0, 0)
+surface_material_override/0 = ExtResource("2_rx2so")

@@ -1,0 +1,121 @@
+[gd_scene load_steps=14 format=3 uid="uid://dwdivk0q38hvy"]
+
+[ext_resource type="PackedScene" uid="uid://ccbf0q84ub023" path="res://player.tscn" id="1_y2atl"]
+[ext_resource type="Material" uid="uid://cnk6nprrla468" path="res://Ground/new_shader_material.tres" id="2_my18e"]
+[ext_resource type="Script" path="res://building_manager.gd" id="2_wr56s"]
+[ext_resource type="Texture2D" uid="uid://ch1eohxklq7vt" path="res://Ground/pano_image_4.jpg" id="3_8chac"]
+[ext_resource type="PackedScene" uid="uid://7lkr14iqkw3a" path="res://Ground/UI.tscn" id="4_r2i7a"]
+[ext_resource type="PackedScene" uid="uid://63pbvkadxe1t" path="res://Models/TownCenter/sm_town_center.tscn" id="5_46xlj"]
+[ext_resource type="PackedScene" uid="uid://b02a0lyk0fti1" path="res://Models/Farm/sm_crop.tscn" id="6_pfvhx"]
+[ext_resource type="PackedScene" uid="uid://5joa83cmuknx" path="res://Models/Farm/SM_PreviewCrop.tscn" id="8_8qp7x"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_50084"]
+panorama = ExtResource("3_8chac")
+
+[sub_resource type="Sky" id="Sky_onqwj"]
+sky_material = SubResource("PanoramaSkyMaterial_50084")
+
+[sub_resource type="Environment" id="Environment_pjqlt"]
+background_mode = 2
+sky = SubResource("Sky_onqwj")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0aot4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d3t3i"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_y2atl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 20, 20)
+
+[node name="BuildingManager" type="Node3D" parent="Player"]
+script = ExtResource("2_wr56s")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_pjqlt")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(0.940511, 0.189473, -0.282028, 0.202615, 0.353553, 0.913207, 0.27274, -0.916024, 0.294131, 0, 5, 0)
+
+[node name="Control" parent="." instance=ExtResource("4_r2i7a")]
+
+[node name="Terrain" type="Node3D" parent="."]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Terrain"]
+material_override = ExtResource("2_my18e")
+mesh = SubResource("PlaneMesh_0aot4")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Terrain"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+visible = false
+material_override = ExtResource("2_my18e")
+mesh = SubResource("PlaneMesh_0aot4")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Terrain"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+visible = false
+material_override = ExtResource("2_my18e")
+mesh = SubResource("PlaneMesh_0aot4")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Terrain"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+visible = false
+material_override = ExtResource("2_my18e")
+mesh = SubResource("PlaneMesh_0aot4")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Terrain"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+visible = false
+material_override = ExtResource("2_my18e")
+mesh = SubResource("PlaneMesh_0aot4")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Terrain"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
+material_override = ExtResource("2_my18e")
+mesh = SubResource("PlaneMesh_0aot4")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Terrain"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
+material_override = ExtResource("2_my18e")
+mesh = SubResource("PlaneMesh_0aot4")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Terrain"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+material_override = ExtResource("2_my18e")
+mesh = SubResource("PlaneMesh_0aot4")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="Terrain"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+material_override = ExtResource("2_my18e")
+mesh = SubResource("PlaneMesh_0aot4")
+skeleton = NodePath("../..")
+
+[node name="SM_TownCenter" parent="Terrain" instance=ExtResource("5_46xlj")]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0, 0.92)
+
+[node name="SM_TownCenter2" parent="Terrain" instance=ExtResource("5_46xlj")]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0, -0.92)
+
+[node name="SM_Crop" parent="Terrain" instance=ExtResource("6_pfvhx")]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0.02, 0.02, -0.66)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.28, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.72, 0)
+shape = SubResource("BoxShape3D_d3t3i")
+
+[node name="SM_Crop2" parent="Terrain" instance=ExtResource("8_8qp7x")]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, -0.12, 0.02, -0.66)
+
+[node name="Buildings" type="Node3D" parent="."]

@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://7jqjyad2pory"]
+
+[ext_resource type="PackedScene" uid="uid://dt88tsc3ytbcj" path="res://Models/Ballista/ballista.fbx" id="1_y4tk4"]
+[ext_resource type="Material" uid="uid://bb48825o3ri5g" path="res://Models/Ballista/M_Ballista.tres" id="2_7rp5a"]
+[ext_resource type="Script" path="res://building_object.gd" id="2_dn1ag"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ub7ad"]
+radius = 2129.0
+
+[node name="ballista" instance=ExtResource("1_y4tk4")]
+script = ExtResource("2_dn1ag")
+
+[node name="Ballista_low" parent="." index="0"]
+transform = Transform3D(-4.37114e-06, 100, 1.19209e-05, 0, -1.19209e-05, 100, 100, 4.37114e-06, 5.2108e-13, 0, 0, 0)
+surface_material_override/0 = ExtResource("2_7rp5a")
+
+[node name="Ballista_low_001" parent="." index="1"]
+transform = Transform3D(-4.37114e-06, 100, 1.19209e-05, 0, -1.19209e-05, 100, 100, 4.37114e-06, 5.2108e-13, 0, 0, 0)
+surface_material_override/0 = ExtResource("2_7rp5a")
+
+[node name="Area3D" type="Area3D" parent="Ballista_low_001" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 2.27771e-22, 0, 2.27771e-22, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ballista_low_001/Area3D" index="0"]
+transform = Transform3D(-3.47506e-12, 6.95013e-12, -7.95e-05, 7.95e-05, -2.14813e-11, -3.47506e-12, 2.14813e-11, 7.95e-05, 6.95013e-12, 0.000187335, 4.7575e-05, 2.61992e-06)
+shape = SubResource("SphereShape3D_ub7ad")
+disabled = true
+
+[connection signal="body_entered" from="Ballista_low_001/Area3D" to="." method="_on_area_3d_body_entered"]

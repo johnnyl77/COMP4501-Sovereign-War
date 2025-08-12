@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://byc4mp0gq2eqy"]
+
+[ext_resource type="Texture2D" uid="uid://drfij0ub3dqi8" path="res://Models/Rocks/tree_rocks-clusters-tress_6.png" id="1_87q5g"]
+[ext_resource type="Texture2D" uid="uid://buoi7ivd6rl3n" path="res://Models/Rocks/rocks-clusters-tress_6.png" id="2_wlrs3"]
+
+[resource]
+transparency = 1
+albedo_texture = ExtResource("1_87q5g")
+normal_enabled = true
+normal_scale = -16.0
+normal_texture = ExtResource("2_wlrs3")

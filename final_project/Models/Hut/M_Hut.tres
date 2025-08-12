@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://ba3rs55xxspn6"]
+
+[ext_resource type="Texture2D" uid="uid://dq254rj7uwh4x" path="res://Models/Hut/T_Hut_diffuse.png" id="1_d58uq"]
+[ext_resource type="Texture2D" uid="uid://h87wunspsuti" path="res://Models/Hut/T_Hut_normal.png" id="2_b6rso"]
+[ext_resource type="Texture2D" uid="uid://csu5ejggt0qi5" path="res://Models/Hut/T_Hut_roughness.png" id="2_rj0r4"]
+
+[resource]
+albedo_texture = ExtResource("1_d58uq")
+roughness_texture = ExtResource("2_rj0r4")
+normal_enabled = true
+normal_texture = ExtResource("2_b6rso")

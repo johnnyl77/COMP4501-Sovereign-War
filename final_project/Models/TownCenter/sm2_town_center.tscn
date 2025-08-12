@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://beuogegkl310"]
+
+[ext_resource type="Texture2D" uid="uid://bi56su8cs1une" path="res://Models/TownCenter/T_TownCenter_diffuse.png" id="1_60uh7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pw7lb"]
+resource_name = "M_TownCenter"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.998439, 0.9209, 0, 1)
+albedo_texture = ExtResource("1_60uh7")
+emission_enabled = true
+
+[node name="SM_TownCenter"]
+
+[node name="SM_TownCenter" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_pw7lb")
+
+[node name="UCX_SM_TownCenter" parent="SM_TownCenter" index="0"]
+material_override = SubResource("StandardMaterial3D_pw7lb")

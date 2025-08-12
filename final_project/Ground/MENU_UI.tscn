@@ -1,0 +1,395 @@
+[gd_scene load_steps=4 format=3 uid="uid://3dpbysaqo288"]
+
+[ext_resource type="Script" path="res://Ground/menu_ui.gd" id="1_ulk2p"]
+[ext_resource type="AudioStream" uid="uid://dpsf38abrwcjm" path="res://Sounds/MENU_MUSIC.mp3" id="2_d8jl8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_of7tu"]
+bg_color = Color(0, 0, 0, 0.25)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ulk2p")
+
+[node name="PauseMenuC" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1500.0
+offset_top = 50.0
+offset_right = -1500.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_of7tu")
+
+[node name="BoxContainer" type="BoxContainer" parent="PauseMenuC"]
+layout_mode = 2
+vertical = true
+
+[node name="Label1" type="Label" parent="PauseMenuC/BoxContainer"]
+layout_mode = 2
+text = "
+
+
+
+
+
+
+
+
+
+"
+
+[node name="start_game_button" type="Button" parent="PauseMenuC/BoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 128
+text = "START GAME"
+
+[node name="Label2" type="Label" parent="PauseMenuC/BoxContainer"]
+layout_mode = 2
+text = "
+
+
+
+
+
+
+
+
+
+"
+
+[node name="free_mode_button" type="Button" parent="PauseMenuC/BoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 128
+text = "FREE MODE"
+
+[node name="Label3" type="Label" parent="PauseMenuC/BoxContainer"]
+layout_mode = 2
+text = "
+
+
+
+
+
+
+
+
+
+"
+
+[node name="instructions_button" type="Button" parent="PauseMenuC/BoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 128
+text = "INSTRUCTIONS"
+
+[node name="Label4" type="Label" parent="PauseMenuC/BoxContainer"]
+layout_mode = 2
+text = "
+
+
+
+
+
+
+
+
+
+"
+
+[node name="settings_button" type="Button" parent="PauseMenuC/BoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 128
+text = "SETTINGS"
+
+[node name="Label5" type="Label" parent="PauseMenuC/BoxContainer"]
+layout_mode = 2
+text = "
+
+
+
+
+
+
+
+
+
+"
+
+[node name="quit_button" type="Button" parent="PauseMenuC/BoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 128
+text = "QUIT"
+
+[node name="PauseMenuC2" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1500.0
+offset_top = 50.0
+offset_right = -1500.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_of7tu")
+
+[node name="BoxContainer" type="BoxContainer" parent="PauseMenuC2"]
+layout_mode = 2
+vertical = true
+
+[node name="Label4" type="Label" parent="PauseMenuC2/BoxContainer"]
+layout_mode = 2
+text = "
+
+
+
+
+
+
+
+
+
+"
+
+[node name="Button" type="Button" parent="PauseMenuC2/BoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 128
+text = "BACK"
+
+[node name="Label" type="Label" parent="PauseMenuC2/BoxContainer"]
+layout_mode = 2
+text = "
+
+
+
+
+
+
+
+
+
+"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PauseMenuC2/BoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "[center][img=70]res://Textures/Icons/farmer.png[/img] WHEAT RESOURCE 						[/center]
+[center][img=70]res://Textures/Icons/farmer.png[/img] WHEAT RESOURCE 						[/center]
+[center][img=70]res://Textures/Icons/farmer.png[/img] WHEAT RESOURCE 						[/center]
+[center][img=70]res://Textures/Icons/farmer.png[/img] WHEAT RESOURCE 						[/center]
+[center][img=70]res://Textures/Icons/farmer.png[/img] WHEAT RESOURCE 						[/center]
+[center][img=70]res://Textures/Icons/farmer.png[/img] WHEAT RESOURCE 						[/center]
+[center][img=70]res://Textures/Icons/farmer.png[/img] WHEAT RESOURCE 						[/center]
+[center][img=70]res://Textures/Icons/farmer.png[/img] WHEAT RESOURCE 						[/center]
+[center][img=70]res://Textures/Icons/farmer.png[/img] WHEAT RESOURCE 						[/center]"
+fit_content = true
+
+[node name="PauseMenuC3" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_of7tu")
+
+[node name="BoxContainer" type="BoxContainer" parent="PauseMenuC3"]
+layout_mode = 2
+vertical = true
+
+[node name="Label1" type="Label" parent="PauseMenuC3/BoxContainer"]
+layout_mode = 2
+text = "
+
+
+
+
+
+
+
+
+
+"
+
+[node name="back_button" type="Button" parent="PauseMenuC3/BoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 128
+text = "BACK"
+
+[node name="PauseMenuC4" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_of7tu")
+
+[node name="BoxContainer" type="BoxContainer" parent="PauseMenuC4"]
+layout_mode = 2
+vertical = true
+
+[node name="Label1" type="Label" parent="PauseMenuC4/BoxContainer"]
+layout_mode = 2
+text = "
+
+
+
+
+
+
+"
+
+[node name="back_button" type="Button" parent="PauseMenuC4/BoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 128
+text = "BACK"
+
+[node name="Label7" type="Label" parent="PauseMenuC4/BoxContainer"]
+custom_minimum_size = Vector2(0, 167)
+layout_mode = 2
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 128
+text = "
+VOLUME SETTINGS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="PauseMenuC4/BoxContainer"]
+custom_minimum_size = Vector2(0, 167)
+layout_mode = 2
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 128
+text = "
+MASTER VOLUME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="master_volume_slider" type="HSlider" parent="PauseMenuC4/BoxContainer"]
+custom_minimum_size = Vector2(1000, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+max_value = 9.0
+value = 1.0
+tick_count = 10
+
+[node name="Label3" type="Label" parent="PauseMenuC4/BoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 128
+text = "
+MUSIC"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="music_volume_slider" type="HSlider" parent="PauseMenuC4/BoxContainer"]
+custom_minimum_size = Vector2(1000, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+max_value = 9.0
+value = 1.0
+tick_count = 10
+
+[node name="Label4" type="Label" parent="PauseMenuC4/BoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 128
+text = "
+SFX"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="sfx_volume_slider" type="HSlider" parent="PauseMenuC4/BoxContainer"]
+custom_minimum_size = Vector2(1000, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+max_value = 9.0
+value = 1.0
+tick_count = 10
+
+[node name="Label5" type="Label" parent="PauseMenuC4/BoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 128
+text = "
+UI"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ui_volume_slider" type="HSlider" parent="PauseMenuC4/BoxContainer"]
+custom_minimum_size = Vector2(1000, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+max_value = 9.0
+value = 1.0
+tick_count = 10
+
+[node name="Label6" type="Label" parent="PauseMenuC4/BoxContainer"]
+layout_mode = 2
+text = "
+
+
+
+
+
+
+
+
+
+"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control"]
+stream = ExtResource("2_d8jl8")
+volume_db = -80.0
+autoplay = true
+max_distance = 200000.0
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="button_down" from="PauseMenuC/BoxContainer/start_game_button" to="." method="_on_start_game_button_button_down"]
+[connection signal="button_down" from="PauseMenuC/BoxContainer/free_mode_button" to="." method="_on_free_mode_button_button_down"]
+[connection signal="button_down" from="PauseMenuC/BoxContainer/instructions_button" to="." method="_on_instructions_button_button_down"]
+[connection signal="button_down" from="PauseMenuC/BoxContainer/settings_button" to="." method="_on_settings_button_button_down"]
+[connection signal="button_down" from="PauseMenuC/BoxContainer/quit_button" to="." method="_on_quit_button_button_down"]
+[connection signal="button_down" from="PauseMenuC2/BoxContainer/Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="PauseMenuC3/BoxContainer/back_button" to="." method="_on_back_button_button_down"]
+[connection signal="button_down" from="PauseMenuC4/BoxContainer/back_button" to="." method="_on_back_button_button_down"]
+[connection signal="value_changed" from="PauseMenuC4/BoxContainer/master_volume_slider" to="." method="_on_master_volume_slider_value_changed"]
+[connection signal="value_changed" from="PauseMenuC4/BoxContainer/music_volume_slider" to="." method="_on_music_volume_slider_value_changed"]
+[connection signal="value_changed" from="PauseMenuC4/BoxContainer/sfx_volume_slider" to="." method="_on_sfx_volume_slider_value_changed"]
+[connection signal="value_changed" from="PauseMenuC4/BoxContainer/ui_volume_slider" to="." method="_on_ui_volume_slider_value_changed"]

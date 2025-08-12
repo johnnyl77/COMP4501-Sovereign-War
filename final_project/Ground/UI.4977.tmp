@@ -1,0 +1,1020 @@
+[gd_scene load_steps=31 format=3 uid="uid://7lkr14iqkw3a"]
+
+[ext_resource type="Script" path="res://Ground/ui.gd" id="1_bpipo"]
+[ext_resource type="Texture2D" uid="uid://c237a2gosn4xq" path="res://Ground/wheat (1).png" id="2_48syq"]
+[ext_resource type="Texture2D" uid="uid://ds4n2sfos3pxx" path="res://Ground/wolf-head.png" id="2_l83rv"]
+[ext_resource type="Texture2D" uid="uid://de1dnryntv1i6" path="res://Ground/wood-pile.png" id="3_330yu"]
+[ext_resource type="Texture2D" uid="uid://cgjld3ev0uji1" path="res://Ground/ore (5).png" id="4_1t4it"]
+[ext_resource type="Texture2D" uid="uid://ca0twvgfo014r" path="res://Ground/pause-button.png" id="5_dvisd"]
+[ext_resource type="Texture2D" uid="uid://c3r4sdm6lply2" path="res://Textures/Icons/farmer.png" id="6_8cvse"]
+[ext_resource type="Texture2D" uid="uid://b0564pn07fx13" path="res://Textures/Icons/person.png" id="6_ualxl"]
+[ext_resource type="Texture2D" uid="uid://biqmccr1hw5vg" path="res://Ground/slashed-shield.png" id="6_x3jae"]
+[ext_resource type="Texture2D" uid="uid://blkpbnna04bcd" path="res://Textures/Icons/health-normal.png" id="7_5u6u3"]
+[ext_resource type="Texture2D" uid="uid://b7geohx2j7hc6" path="res://Textures/Icons/axe-in-log.png" id="7_51kwy"]
+[ext_resource type="Texture2D" uid="uid://0g5se5lfarrt" path="res://Ground/sword-spade.png" id="7_ir5bx"]
+[ext_resource type="Texture2D" uid="uid://dgt0b6xsjd188" path="res://Textures/Icons/miner.png" id="8_cb68s"]
+[ext_resource type="Texture2D" uid="uid://cpdwnkr2356my" path="res://Textures/Icons/crowned-skull.png" id="8_v2645"]
+[ext_resource type="Texture2D" uid="uid://cphccqheort57" path="res://Textures/Icons/black-knight-helm.png" id="9_jrqcl"]
+[ext_resource type="Texture2D" uid="uid://co6uemyk8fpd7" path="res://Textures/Icons/spiked-mace.png" id="10_5g811"]
+[ext_resource type="Texture2D" uid="uid://dotyvsdlu7ref" path="res://Textures/Icons/tarot-02-the-high-priestess.png" id="12_54t5h"]
+[ext_resource type="Texture2D" uid="uid://b7b7lymaqpv1m" path="res://Textures/Icons/pitchfork.png" id="15_8amd1"]
+[ext_resource type="Texture2D" uid="uid://k26si3wboxm6" path="res://Ground/minions.png" id="15_x52k1"]
+[ext_resource type="Texture2D" uid="uid://cg5vhh4u7esps" path="res://Textures/Icons/barracks-tent.png" id="16_mwfgr"]
+[ext_resource type="Texture2D" uid="uid://gr2qdj5jun4q" path="res://Textures/Icons/stockpiles.png" id="17_cnjcq"]
+[ext_resource type="Texture2D" uid="uid://b7qwwenqjr81y" path="res://Textures/Icons/stakes-fence.png" id="18_681un"]
+[ext_resource type="Texture2D" uid="uid://csgyvud70cqdb" path="res://Textures/Icons/defensive-wall.png" id="19_jr7t0"]
+[ext_resource type="Texture2D" uid="uid://bcoj8fefpv8kd" path="res://Textures/Icons/ballista.png" id="20_m6k2g"]
+[ext_resource type="AudioStream" uid="uid://djrfcg6ccq7ui" path="res://Sounds/AMBI_MUSIC.mp3" id="25_nhhes"]
+[ext_resource type="AudioStream" uid="uid://t2k3r4ty1awx" path="res://Sounds/HOVER_SOUND.mp3" id="26_m12e2"]
+[ext_resource type="AudioStream" uid="uid://dr36hrncoptfi" path="res://Sounds/PLACE_SOUND.wav" id="27_vqi5n"]
+[ext_resource type="AudioStream" uid="uid://d3nc6ee1b5uld" path="res://Sounds/DESTROY_SOUND.wav" id="28_vahe6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2dwy0"]
+texture = ExtResource("2_l83rv")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+modulate_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_of7tu"]
+bg_color = Color(0, 0, 0, 0.25)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bpipo")
+
+[node name="ResourcesC" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.327
+anchor_bottom = 0.13
+offset_right = 1197.32
+offset_bottom = 230.2
+scale = Vector2(0.4, 0.4)
+pivot_offset = Vector2(50, 50)
+theme_override_styles/panel = SubResource("StyleBoxTexture_2dwy0")
+
+[node name="BoxContainer" type="BoxContainer" parent="ResourcesC"]
+layout_mode = 2
+
+[node name="TextureButton2" type="TextureButton" parent="ResourcesC/BoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("2_48syq")
+
+[node name="food_text" type="Label" parent="ResourcesC/BoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "100"
+vertical_alignment = 1
+
+[node name="food_text2" type="Label" parent="ResourcesC/BoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "/ 500"
+vertical_alignment = 1
+
+[node name="TextureButton3" type="TextureButton" parent="ResourcesC/BoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("3_330yu")
+
+[node name="wood_text" type="Label" parent="ResourcesC/BoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "0"
+vertical_alignment = 1
+
+[node name="food_text3" type="Label" parent="ResourcesC/BoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "/ 500"
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="ResourcesC/BoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("4_1t4it")
+
+[node name="ore_text" type="Label" parent="ResourcesC/BoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "0"
+vertical_alignment = 1
+
+[node name="food_text6" type="Label" parent="ResourcesC/BoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "/ 500"
+vertical_alignment = 1
+
+[node name="TextureButton4" type="TextureButton" parent="ResourcesC/BoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("6_ualxl")
+
+[node name="units_text" type="Label" parent="ResourcesC/BoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "0"
+vertical_alignment = 1
+
+[node name="food_text5" type="Label" parent="ResourcesC/BoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "/ 5"
+vertical_alignment = 1
+
+[node name="TextureButton5" type="TextureButton" parent="ResourcesC/BoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("7_5u6u3")
+
+[node name="health_text" type="Label" parent="ResourcesC/BoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "100"
+vertical_alignment = 1
+
+[node name="food_text4" type="Label" parent="ResourcesC/BoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "/ 100"
+vertical_alignment = 1
+
+[node name="TextureButton6" type="TextureButton" parent="ResourcesC/BoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("8_v2645")
+
+[node name="enemy_text" type="Label" parent="ResourcesC/BoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "100"
+vertical_alignment = 1
+
+[node name="food_text7" type="Label" parent="ResourcesC/BoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "/ 100"
+vertical_alignment = 1
+
+[node name="PauseC" type="PanelContainer" parent="."]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.939
+anchor_right = 1.0
+anchor_bottom = 0.109
+offset_left = 30.2397
+offset_right = 307.0
+offset_bottom = 275.56
+grow_horizontal = 0
+scale = Vector2(0.4, 0.4)
+pivot_offset = Vector2(-50, 50)
+theme_override_styles/panel = SubResource("StyleBoxTexture_2dwy0")
+
+[node name="BoxContainer" type="BoxContainer" parent="PauseC"]
+layout_mode = 2
+alignment = 2
+
+[node name="pause_button" type="TextureButton" parent="PauseC/BoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("5_dvisd")
+
+[node name="UnitsC" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1945.0
+offset_top = -204.0
+offset_right = 2918.0
+offset_bottom = 307.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.4, 0.4)
+pivot_offset = Vector2(-50, -50)
+theme_override_styles/panel = SubResource("StyleBoxTexture_2dwy0")
+
+[node name="BoxContainer" type="BoxContainer" parent="UnitsC"]
+layout_mode = 2
+alignment = 2
+
+[node name="farmer_button" type="TextureButton" parent="UnitsC/BoxContainer"]
+modulate = Color(0.74902, 0.74902, 0.74902, 1)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("6_8cvse")
+
+[node name="Label" type="Label" parent="UnitsC/BoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 32
+text = "
+"
+vertical_alignment = 1
+
+[node name="lumber_button" type="TextureButton" parent="UnitsC/BoxContainer"]
+modulate = Color(0.74902, 0.74902, 0.74902, 1)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("7_51kwy")
+
+[node name="Label2" type="Label" parent="UnitsC/BoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 32
+vertical_alignment = 1
+
+[node name="miner_button" type="TextureButton" parent="UnitsC/BoxContainer"]
+modulate = Color(0.74902, 0.74902, 0.74902, 1)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("8_cb68s")
+
+[node name="Label3" type="Label" parent="UnitsC/BoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 32
+vertical_alignment = 1
+
+[node name="knight_button" type="TextureButton" parent="UnitsC/BoxContainer"]
+modulate = Color(0.74902, 0.74902, 0.74902, 1)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("9_jrqcl")
+
+[node name="Label4" type="Label" parent="UnitsC/BoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 32
+vertical_alignment = 1
+
+[node name="mace_button" type="TextureButton" parent="UnitsC/BoxContainer"]
+modulate = Color(0.74902, 0.74902, 0.74902, 1)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("10_5g811")
+
+[node name="Label5" type="Label" parent="UnitsC/BoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 32
+vertical_alignment = 1
+
+[node name="mage_button" type="TextureButton" parent="UnitsC/BoxContainer"]
+modulate = Color(0.74902, 0.74902, 0.74902, 1)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("12_54t5h")
+
+[node name="Label6" type="Label" parent="UnitsC/BoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 32
+vertical_alignment = 1
+
+[node name="UnitCostsC" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1945.0
+offset_top = -409.0
+offset_right = 2918.0
+offset_bottom = 102.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.4, 0.4)
+pivot_offset = Vector2(-50, -50)
+theme_override_styles/panel = SubResource("StyleBoxTexture_2dwy0")
+
+[node name="BoxContainer" type="BoxContainer" parent="UnitCostsC"]
+layout_mode = 2
+alignment = 2
+
+[node name="farmer_cost_label" type="Label" parent="UnitCostsC/BoxContainer"]
+custom_minimum_size = Vector2(511, 200)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 80
+text = "Cost:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="UnitCostsC/BoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 32
+text = "
+"
+vertical_alignment = 1
+
+[node name="lumber_cost_label" type="Label" parent="UnitCostsC/BoxContainer"]
+custom_minimum_size = Vector2(511, 200)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 80
+text = "Cost:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="UnitCostsC/BoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 32
+vertical_alignment = 1
+
+[node name="miner_cost_label" type="Label" parent="UnitCostsC/BoxContainer"]
+custom_minimum_size = Vector2(511, 200)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 80
+text = "Cost:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="UnitCostsC/BoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 32
+vertical_alignment = 1
+
+[node name="knight_cost_label" type="Label" parent="UnitCostsC/BoxContainer"]
+custom_minimum_size = Vector2(511, 200)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 80
+text = "Cost:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="UnitCostsC/BoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 32
+vertical_alignment = 1
+
+[node name="mace_cost_label" type="Label" parent="UnitCostsC/BoxContainer"]
+custom_minimum_size = Vector2(511, 200)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 80
+text = "Cost:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="UnitCostsC/BoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 32
+vertical_alignment = 1
+
+[node name="mage_cost_label" type="Label" parent="UnitCostsC/BoxContainer"]
+custom_minimum_size = Vector2(511, 200)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 80
+text = "Cost:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="UnitCostsC/BoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 32
+vertical_alignment = 1
+
+[node name="ActionsC" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.685
+anchor_right = 0.061
+anchor_bottom = 1.0
+offset_left = -23.04
+offset_top = 24.3999
+offset_right = 276.76
+offset_bottom = 983.0
+grow_vertical = 0
+scale = Vector2(0.4, 0.4)
+pivot_offset = Vector2(50, -50)
+theme_override_styles/panel = SubResource("StyleBoxTexture_2dwy0")
+
+[node name="BoxContainer" type="BoxContainer" parent="ActionsC"]
+layout_mode = 2
+alignment = 2
+vertical = true
+
+[node name="defend_button" type="TextureButton" parent="ActionsC/BoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("6_x3jae")
+
+[node name="Label" type="Label" parent="ActionsC/BoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 32
+text = "
+"
+vertical_alignment = 1
+
+[node name="attack_button" type="TextureButton" parent="ActionsC/BoxContainer"]
+modulate = Color(0.74902, 0.74902, 0.74902, 1)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("7_ir5bx")
+
+[node name="Label2" type="Label" parent="ActionsC/BoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 32
+vertical_alignment = 1
+
+[node name="action_button" type="TextureButton" parent="ActionsC/BoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("15_x52k1")
+
+[node name="BuildingsC" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.653
+anchor_top = 0.893
+anchor_right = 1.0
+anchor_bottom = 0.996
+offset_left = 28.4797
+offset_top = 27.12
+offset_right = 1956.0
+offset_bottom = 315.64
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.4, 0.4)
+pivot_offset = Vector2(-50, -50)
+theme_override_styles/panel = SubResource("StyleBoxTexture_2dwy0")
+
+[node name="BoxContainer" type="BoxContainer" parent="BuildingsC"]
+layout_mode = 2
+alignment = 2
+
+[node name="farm_button" type="TextureButton" parent="BuildingsC/BoxContainer"]
+modulate = Color(0.74902, 0.74902, 0.74902, 1)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("15_8amd1")
+
+[node name="Label" type="Label" parent="BuildingsC/BoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 32
+text = "
+"
+vertical_alignment = 1
+
+[node name="mine_button" type="TextureButton" parent="BuildingsC/BoxContainer"]
+modulate = Color(0.75, 0.75, 0.75, 1)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("17_cnjcq")
+
+[node name="Label2" type="Label" parent="BuildingsC/BoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 32
+vertical_alignment = 1
+
+[node name="barrack_button" type="TextureButton" parent="BuildingsC/BoxContainer"]
+modulate = Color(0.74902, 0.74902, 0.74902, 1)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("16_mwfgr")
+
+[node name="Label3" type="Label" parent="BuildingsC/BoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 32
+vertical_alignment = 1
+
+[node name="spike_button" type="TextureButton" parent="BuildingsC/BoxContainer"]
+modulate = Color(0.74902, 0.74902, 0.74902, 1)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("18_681un")
+
+[node name="Label4" type="Label" parent="BuildingsC/BoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 32
+vertical_alignment = 1
+
+[node name="wall_button" type="TextureButton" parent="BuildingsC/BoxContainer"]
+modulate = Color(0.74902, 0.74902, 0.74902, 1)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("19_jr7t0")
+
+[node name="Label5" type="Label" parent="BuildingsC/BoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 32
+vertical_alignment = 1
+
+[node name="xbow_button" type="TextureButton" parent="BuildingsC/BoxContainer"]
+modulate = Color(0.74902, 0.74902, 0.74902, 1)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("20_m6k2g")
+
+[node name="Label6" type="Label" parent="BuildingsC/BoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 32
+vertical_alignment = 1
+
+[node name="BuildingCostsC" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 2
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1945.0
+offset_top = -409.0
+offset_right = 2918.0
+offset_bottom = 102.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.4, 0.4)
+pivot_offset = Vector2(-50, -50)
+theme_override_styles/panel = SubResource("StyleBoxTexture_2dwy0")
+
+[node name="BoxContainer" type="BoxContainer" parent="BuildingCostsC"]
+layout_mode = 2
+alignment = 2
+
+[node name="farm_cost_label" type="Label" parent="BuildingCostsC/BoxContainer"]
+custom_minimum_size = Vector2(511, 200)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 80
+text = "Cost:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="BuildingCostsC/BoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 32
+text = "
+"
+vertical_alignment = 1
+
+[node name="mine_cost_label" type="Label" parent="BuildingCostsC/BoxContainer"]
+custom_minimum_size = Vector2(511, 200)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 80
+text = "Cost:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="BuildingCostsC/BoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 32
+vertical_alignment = 1
+
+[node name="barrack_cost_label" type="Label" parent="BuildingCostsC/BoxContainer"]
+custom_minimum_size = Vector2(511, 200)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 80
+text = "Cost:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="BuildingCostsC/BoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 32
+vertical_alignment = 1
+
+[node name="spike_cost_label" type="Label" parent="BuildingCostsC/BoxContainer"]
+custom_minimum_size = Vector2(511, 200)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 80
+text = "Cost:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="BuildingCostsC/BoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 32
+vertical_alignment = 1
+
+[node name="wall_cost_label" type="Label" parent="BuildingCostsC/BoxContainer"]
+custom_minimum_size = Vector2(511, 200)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 80
+text = "Cost:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="BuildingCostsC/BoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 32
+vertical_alignment = 1
+
+[node name="xbow_cost_label" type="Label" parent="BuildingCostsC/BoxContainer"]
+custom_minimum_size = Vector2(511, 200)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 80
+text = "Cost:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="BuildingCostsC/BoxContainer"]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 32
+vertical_alignment = 1
+
+[node name="TooltipsC" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -335.0
+offset_right = -50.0
+offset_bottom = 335.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_of7tu")
+
+[node name="BoxContainer" type="BoxContainer" parent="TooltipsC"]
+layout_mode = 2
+vertical = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TooltipsC/BoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[img=5,5]res://Textures/Icons/farmer.png[/img]    */10       [img=5,5q]res://Ground/wheat (1).png[/img]
+[img=5,5]res://Ground/axe-in-log.png[/img]    */10       [img=5,5q]res://Ground/wheat (1).png[/img]
+[img=5,5]res://Textures/Icons/miner.png[/img]    */10       [img=5,5q]res://Ground/wheat (1).png[/img]
+[img=5,5]res://Textures/Icons/black-knight-helm.png[/img]    */50      [img=5,5q]res://Ground/wheat (1).png[/img]
+[img=5,5]res://Textures/Icons/spiked-mace.png[/img]    */75      [img=5,5q]res://Ground/wheat (1).png[/img]
+[img=5,5]res://Textures/Icons/tarot-02-the-high-priestess.png[/img]    */200    [img=5,5q]res://Ground/wheat (1).png[/img]
+[img=5,5]res://Textures/Icons/pitchfork.png[/img]    */25      [img=5,5q]res://Ground/wheat (1).png[/img]
+[img=5,5]res://Textures/Icons/stockpiles.png[/img]    */50      [img=5,5q]res://Ground/wood-pile.png[/img]
+[img=5,5]res://Textures/Icons/barracks-tent.png[/img]    */100     [img=5,5q]res://Ground/wood-pile.png[/img]
+[img=5,5]res://Textures/Icons/stakes-fence.png[/img]    */100     [img=5,5q]res://Ground/ore (5).png[/img]
+[img=5,5]res://Textures/Icons/defensive-wall.png[/img]    */200    [img=5,5q]res://Ground/ore (5).png[/img]
+[img=5,5]res://Textures/Icons/ballista.png[/img]    */500    [img=5,5q]res://Ground/ore (5).png[/img]"
+fit_content = true
+
+[node name="PauseMenuC" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1500.0
+offset_top = 50.0
+offset_right = -1500.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_of7tu")
+
+[node name="BoxContainer" type="BoxContainer" parent="PauseMenuC"]
+layout_mode = 2
+vertical = true
+
+[node name="Label4" type="Label" parent="PauseMenuC/BoxContainer"]
+layout_mode = 2
+text = "
+
+
+
+
+
+
+
+
+
+"
+
+[node name="Button" type="Button" parent="PauseMenuC/BoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 128
+text = "RESUME"
+
+[node name="Label" type="Label" parent="PauseMenuC/BoxContainer"]
+layout_mode = 2
+text = "
+
+
+
+
+
+
+
+
+
+"
+
+[node name="Button3" type="Button" parent="PauseMenuC/BoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 128
+text = "RETURN TO MENU"
+
+[node name="Label3" type="Label" parent="PauseMenuC/BoxContainer"]
+layout_mode = 2
+text = "
+
+
+
+
+
+
+
+
+
+"
+
+[node name="Button4" type="Button" parent="PauseMenuC/BoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 128
+text = "QUIT"
+
+[node name="WINMENU" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1500.0
+offset_top = 50.0
+offset_right = -1500.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_of7tu")
+
+[node name="BoxContainer" type="BoxContainer" parent="WINMENU"]
+layout_mode = 2
+vertical = true
+
+[node name="Label4" type="Label" parent="WINMENU/BoxContainer"]
+layout_mode = 2
+text = "
+
+
+
+
+
+
+
+
+
+"
+
+[node name="Label3" type="Label" parent="WINMENU/BoxContainer"]
+layout_mode = 2
+text = "
+
+
+
+
+
+
+
+
+
+"
+
+[node name="WINB" type="Button" parent="WINMENU/BoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 128
+text = "YOU WIN"
+
+[node name="PauseMenuC2" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1500.0
+offset_top = 50.0
+offset_right = -1500.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_of7tu")
+
+[node name="BoxContainer" type="BoxContainer" parent="PauseMenuC2"]
+layout_mode = 2
+vertical = true
+
+[node name="Label4" type="Label" parent="PauseMenuC2/BoxContainer"]
+layout_mode = 2
+text = "
+
+
+
+
+
+
+
+
+
+"
+
+[node name="Button" type="Button" parent="PauseMenuC2/BoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 128
+text = "BACK"
+
+[node name="Label" type="Label" parent="PauseMenuC2/BoxContainer"]
+layout_mode = 2
+text = "
+
+
+
+
+
+
+
+
+
+"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PauseMenuC2/BoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "[center][img=70]res://Textures/Icons/farmer.png[/img] WHEAT RESOURCE 						[/center]
+[center][img=70]res://Textures/Icons/farmer.png[/img] WHEAT RESOURCE 						[/center]
+[center][img=70]res://Textures/Icons/farmer.png[/img] WHEAT RESOURCE 						[/center]
+[center][img=70]res://Textures/Icons/farmer.png[/img] WHEAT RESOURCE 						[/center]
+[center][img=70]res://Textures/Icons/farmer.png[/img] WHEAT RESOURCE 						[/center]
+[center][img=70]res://Textures/Icons/farmer.png[/img] WHEAT RESOURCE 						[/center]
+[center][img=70]res://Textures/Icons/farmer.png[/img] WHEAT RESOURCE 						[/center]
+[center][img=70]res://Textures/Icons/farmer.png[/img] WHEAT RESOURCE 						[/center]
+[center][img=70]res://Textures/Icons/farmer.png[/img] WHEAT RESOURCE 						[/center]"
+fit_content = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control"]
+stream = ExtResource("25_nhhes")
+autoplay = true
+max_distance = 200000.0
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="Control"]
+stream = ExtResource("26_m12e2")
+max_distance = 200000.0
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="Control"]
+stream = ExtResource("27_vqi5n")
+max_distance = 200000.0
+
+[node name="AudioStreamPlayer2D4" type="AudioStreamPlayer2D" parent="Control"]
+stream = ExtResource("28_vahe6")
+max_distance = 200000.0
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="button_down" from="PauseC/BoxContainer/pause_button" to="." method="_on_pause_button_button_down"]
+[connection signal="focus_entered" from="PauseC/BoxContainer/pause_button" to="." method="_on_pause_button_focus_entered"]
+[connection signal="mouse_entered" from="PauseC/BoxContainer/pause_button" to="." method="_on_pause_button_mouse_entered"]
+[connection signal="mouse_exited" from="PauseC/BoxContainer/pause_button" to="." method="_on_pause_button_mouse_exited"]
+[connection signal="button_down" from="UnitsC/BoxContainer/farmer_button" to="." method="_on_farmer_button_button_down"]
+[connection signal="mouse_entered" from="UnitsC/BoxContainer/farmer_button" to="." method="_on_farmer_button_mouse_entered"]
+[connection signal="mouse_exited" from="UnitsC/BoxContainer/farmer_button" to="." method="_on_farmer_button_mouse_exited"]
+[connection signal="button_down" from="UnitsC/BoxContainer/lumber_button" to="." method="_on_lumber_button_button_down"]
+[connection signal="mouse_entered" from="UnitsC/BoxContainer/lumber_button" to="." method="_on_lumber_button_mouse_entered"]
+[connection signal="mouse_exited" from="UnitsC/BoxContainer/lumber_button" to="." method="_on_lumber_button_mouse_exited"]
+[connection signal="button_down" from="UnitsC/BoxContainer/miner_button" to="." method="_on_miner_button_button_down"]
+[connection signal="mouse_entered" from="UnitsC/BoxContainer/miner_button" to="." method="_on_miner_button_mouse_entered"]
+[connection signal="mouse_exited" from="UnitsC/BoxContainer/miner_button" to="." method="_on_miner_button_mouse_exited"]
+[connection signal="button_down" from="UnitsC/BoxContainer/knight_button" to="." method="_on_knight_button_button_down"]
+[connection signal="mouse_entered" from="UnitsC/BoxContainer/knight_button" to="." method="_on_knight_button_mouse_entered"]
+[connection signal="mouse_exited" from="UnitsC/BoxContainer/knight_button" to="." method="_on_knight_button_mouse_exited"]
+[connection signal="button_down" from="UnitsC/BoxContainer/mace_button" to="." method="_on_mace_button_button_down"]
+[connection signal="mouse_entered" from="UnitsC/BoxContainer/mace_button" to="." method="_on_mace_button_mouse_entered"]
+[connection signal="mouse_exited" from="UnitsC/BoxContainer/mace_button" to="." method="_on_mace_button_mouse_exited"]
+[connection signal="button_down" from="UnitsC/BoxContainer/mage_button" to="." method="_on_mage_button_button_down"]
+[connection signal="mouse_entered" from="UnitsC/BoxContainer/mage_button" to="." method="_on_mage_button_mouse_entered"]
+[connection signal="mouse_exited" from="UnitsC/BoxContainer/mage_button" to="." method="_on_mage_button_mouse_exited"]
+[connection signal="button_down" from="ActionsC/BoxContainer/defend_button" to="." method="_on_defend_button_button_down"]
+[connection signal="mouse_entered" from="ActionsC/BoxContainer/defend_button" to="." method="_on_defend_button_mouse_entered"]
+[connection signal="mouse_exited" from="ActionsC/BoxContainer/defend_button" to="." method="_on_defend_button_mouse_exited"]
+[connection signal="button_down" from="ActionsC/BoxContainer/attack_button" to="." method="_on_attack_button_button_down"]
+[connection signal="mouse_entered" from="ActionsC/BoxContainer/attack_button" to="." method="_on_attack_button_mouse_entered"]
+[connection signal="mouse_exited" from="ActionsC/BoxContainer/attack_button" to="." method="_on_attack_button_mouse_exited"]
+[connection signal="button_down" from="ActionsC/BoxContainer/action_button" to="." method="_on_action_button_button_down"]
+[connection signal="mouse_entered" from="ActionsC/BoxContainer/action_button" to="." method="_on_action_button_mouse_entered"]
+[connection signal="mouse_exited" from="ActionsC/BoxContainer/action_button" to="." method="_on_action_button_mouse_exited"]
+[connection signal="mouse_entered" from="BuildingsC" to="." method="_on_buildings_c_mouse_entered"]
+[connection signal="mouse_exited" from="BuildingsC" to="." method="_on_buildings_c_mouse_exited"]
+[connection signal="button_down" from="BuildingsC/BoxContainer/farm_button" to="." method="_on_farm_button_button_down"]
+[connection signal="mouse_entered" from="BuildingsC/BoxContainer/farm_button" to="." method="_on_farm_button_mouse_entered"]
+[connection signal="mouse_exited" from="BuildingsC/BoxContainer/farm_button" to="." method="_on_farm_button_mouse_exited"]
+[connection signal="button_down" from="BuildingsC/BoxContainer/mine_button" to="." method="_on_mine_button_button_down"]
+[connection signal="mouse_entered" from="BuildingsC/BoxContainer/mine_button" to="." method="_on_mine_button_mouse_entered"]
+[connection signal="mouse_exited" from="BuildingsC/BoxContainer/mine_button" to="." method="_on_mine_button_mouse_exited"]
+[connection signal="button_down" from="BuildingsC/BoxContainer/barrack_button" to="." method="_on_barrack_button_button_down"]
+[connection signal="mouse_entered" from="BuildingsC/BoxContainer/barrack_button" to="." method="_on_barrack_button_mouse_entered"]
+[connection signal="mouse_exited" from="BuildingsC/BoxContainer/barrack_button" to="." method="_on_barrack_button_mouse_exited"]
+[connection signal="button_down" from="BuildingsC/BoxContainer/spike_button" to="." method="_on_spike_button_button_down"]
+[connection signal="mouse_entered" from="BuildingsC/BoxContainer/spike_button" to="." method="_on_spike_button_mouse_entered"]
+[connection signal="mouse_exited" from="BuildingsC/BoxContainer/spike_button" to="." method="_on_spike_button_mouse_exited"]
+[connection signal="button_down" from="BuildingsC/BoxContainer/wall_button" to="." method="_on_wall_button_button_down"]
+[connection signal="mouse_entered" from="BuildingsC/BoxContainer/wall_button" to="." method="_on_wall_button_mouse_entered"]
+[connection signal="mouse_exited" from="BuildingsC/BoxContainer/wall_button" to="." method="_on_wall_button_mouse_exited"]
+[connection signal="button_down" from="BuildingsC/BoxContainer/xbow_button" to="." method="_on_xbow_button_button_down"]
+[connection signal="mouse_entered" from="BuildingsC/BoxContainer/xbow_button" to="." method="_on_xbow_button_mouse_entered"]
+[connection signal="mouse_exited" from="BuildingsC/BoxContainer/xbow_button" to="." method="_on_xbow_button_mouse_exited"]
+[connection signal="button_down" from="PauseMenuC/BoxContainer/Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="PauseMenuC/BoxContainer/Button3" to="." method="_on_button_3_button_down"]
+[connection signal="button_down" from="PauseMenuC/BoxContainer/Button4" to="." method="_on_button_4_button_down"]
+[connection signal="button_down" from="PauseMenuC2/BoxContainer/Button" to="." method="_on_button_button_down"]
+[connection signal="finished" from="Control/AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]
+[connection signal="finished" from="Control/AudioStreamPlayer2D2" to="." method="_on_audio_stream_player_2d_2_finished"]
+[connection signal="finished" from="Control/AudioStreamPlayer2D3" to="." method="_on_audio_stream_player_2d_3_finished"]
+[connection signal="finished" from="Control/AudioStreamPlayer2D4" to="." method="_on_audio_stream_player_2d_4_finished"]

@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://do2gc2g4i732v"]
+
+[ext_resource type="Texture2D" uid="uid://bi56su8cs1une" path="res://Models/TownCenter/T_TownCenter_diffuse.png" id="1_4k70v"]
+[ext_resource type="Texture2D" uid="uid://gfejyskfh2e7" path="res://Models/TownCenter/T_TownCenter_metalness.png" id="2_6qcti"]
+[ext_resource type="Texture2D" uid="uid://dervgaj0vtpwb" path="res://Models/TownCenter/T_TownCenter_normal.png" id="3_bulgj"]
+[ext_resource type="Texture2D" uid="uid://cu0ljg2uehrda" path="res://Models/TownCenter/T_TownCenter_roughness.png" id="4_xkdbb"]
+
+[resource]
+albedo_texture = ExtResource("1_4k70v")
+metallic = 1.0
+metallic_texture = ExtResource("2_6qcti")
+roughness_texture = ExtResource("4_xkdbb")
+normal_enabled = true
+normal_texture = ExtResource("3_bulgj")

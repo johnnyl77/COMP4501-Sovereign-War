@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://6ld5yeeayfse"]
+
+[ext_resource type="Texture2D" uid="uid://da1c6cvkdenq1" path="res://Models/Barracks/T_Barracks_diffuse.png" id="1_usffi"]
+[ext_resource type="Texture2D" uid="uid://bllmoopehujep" path="res://Models/Barracks/T_Barracks_metalness.png" id="2_bvwvi"]
+[ext_resource type="Texture2D" uid="uid://yjce8ks8f3cg" path="res://Models/Barracks/T_Barracks_normal.png" id="3_q2thg"]
+[ext_resource type="Texture2D" uid="uid://6pqs8gtan3ic" path="res://Models/Barracks/T_Barracks_roughness.png" id="4_w1h7t"]
+
+[resource]
+albedo_texture = ExtResource("1_usffi")
+metallic = 1.0
+metallic_texture = ExtResource("2_bvwvi")
+roughness_texture = ExtResource("4_w1h7t")
+normal_enabled = true
+normal_texture = ExtResource("3_q2thg")

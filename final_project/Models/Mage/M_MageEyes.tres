@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b4jojflftevbp"]
+
+[ext_resource type="Texture2D" uid="uid://bj5dfc433yhfi" path="res://Models/Mage/FrierenClothing_Col.png" id="1_rul3f"]
+
+[resource]
+albedo_texture = ExtResource("1_rul3f")

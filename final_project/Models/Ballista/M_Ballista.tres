@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://bb48825o3ri5g"]
+
+[ext_resource type="Texture2D" uid="uid://bc7seqq7n3qh8" path="res://Models/Ballista/Ballista_lambert1_BaseColor.tga.png" id="1_4kgr3"]
+[ext_resource type="Texture2D" uid="uid://cqwcii46fn2pt" path="res://Models/Ballista/Ballista_lambert1_Metallic.tga.png" id="2_ci037"]
+[ext_resource type="Texture2D" uid="uid://cf2j7of2u8rus" path="res://Models/Ballista/Ballista_lambert1_Normal.tga.png" id="3_snk8k"]
+[ext_resource type="Texture2D" uid="uid://bx3wyxfntkvh6" path="res://Models/Ballista/Ballista_lambert1_Roughness.tga.png" id="4_t281v"]
+
+[resource]
+albedo_texture = ExtResource("1_4kgr3")
+metallic = 1.0
+metallic_texture = ExtResource("2_ci037")
+roughness_texture = ExtResource("4_t281v")
+normal_enabled = true
+normal_texture = ExtResource("3_snk8k")

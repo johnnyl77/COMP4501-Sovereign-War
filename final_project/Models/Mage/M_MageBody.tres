@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cq2m71pa18vcs"]
+
+[ext_resource type="Texture2D" uid="uid://b0dnd2bdxf32v" path="res://Models/Mage/Frieren_Col_v02.png" id="1_t1c76"]
+
+[resource]
+albedo_texture = ExtResource("1_t1c76")

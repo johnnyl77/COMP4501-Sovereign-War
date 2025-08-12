@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://c78jvvl3vue8w"]
+
+[ext_resource type="PackedScene" uid="uid://bbrtvswcjf62u" path="res://Models/Tower/sm_Tower.fbx" id="1_8mhm8"]
+[ext_resource type="Material" uid="uid://c47hanlhc5qa3" path="res://Models/Farm/M_Preview.tres" id="2_ipuwx"]
+
+[node name="sm_Tower" instance=ExtResource("1_8mhm8")]
+
+[node name="SM_TowerW" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_ipuwx")

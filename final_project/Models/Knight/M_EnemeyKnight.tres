@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://bcrq0dc776nxs"]
+
+[ext_resource type="Texture2D" uid="uid://cl2hybhtb70ba" path="res://Models/Knight/t_paintpoly_paladin_knight_albedo.png" id="1_ok0d4"]
+[ext_resource type="Texture2D" uid="uid://depuoecexmdxe" path="res://Models/Knight/t_paintpoly_paladin_knight_normal_obj.png" id="2_ogwan"]
+[ext_resource type="Texture2D" uid="uid://b6sugpwlaj0sm" path="res://Models/Knight/t_paintpoly_paladin_knight_roughness.png" id="3_ibhcp"]
+
+[resource]
+albedo_color = Color(0.5, 0, 0, 1)
+albedo_texture = ExtResource("1_ok0d4")
+roughness_texture = ExtResource("3_ibhcp")
+normal_enabled = true
+normal_texture = ExtResource("2_ogwan")

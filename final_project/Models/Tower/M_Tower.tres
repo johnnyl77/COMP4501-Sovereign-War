@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://bvo2pmv8yad5h"]
+
+[ext_resource type="Texture2D" uid="uid://m7vl80viiqtu" path="res://Models/Tower/T_Tower_diffuse.png" id="1_6iy1y"]
+[ext_resource type="Texture2D" uid="uid://2uuoicwaq3n2" path="res://Models/Tower/T_Tower_metalness.png" id="2_6wvyl"]
+[ext_resource type="Texture2D" uid="uid://b2k521fceus5g" path="res://Models/Tower/T_Tower_normal.png" id="3_qv7pe"]
+[ext_resource type="Texture2D" uid="uid://np8jmnis1fwj" path="res://Models/Tower/T_Tower_roughness.png" id="4_f46qx"]
+
+[resource]
+albedo_texture = ExtResource("1_6iy1y")
+metallic = 1.0
+metallic_texture = ExtResource("2_6wvyl")
+roughness_texture = ExtResource("4_f46qx")
+normal_enabled = true
+normal_texture = ExtResource("3_qv7pe")

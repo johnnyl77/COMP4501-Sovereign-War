@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://63pbvkadxe1t"]
+
+[ext_resource type="PackedScene" uid="uid://bn8ag1h0gh8jx" path="res://Models/TownCenter/SM_TownCenter.fbx" id="1_fkm16"]
+[ext_resource type="Material" uid="uid://do2gc2g4i732v" path="res://Models/TownCenter/M_TownCenter.tres" id="2_brx1l"]
+[ext_resource type="Script" path="res://Models/TownCenter/town_center.gd" id="2_wdh7m"]
+[ext_resource type="AudioStream" uid="uid://cfeqeib1xlkk1" path="res://Sounds/COLLIDE_SOUND.wav" id="4_u62fg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p6oe1"]
+
+[node name="SM_TownCenter" instance=ExtResource("1_fkm16")]
+script = ExtResource("2_wdh7m")
+
+[node name="SM_TownCenter" parent="." index="0"]
+material_override = ExtResource("2_brx1l")
+
+[node name="UCX_SM_TownCenter" parent="SM_TownCenter" index="0"]
+material_override = ExtResource("2_brx1l")
+
+[node name="Area3D" type="Area3D" parent="SM_TownCenter/UCX_SM_TownCenter" index="0"]
+collision_mask = 65797
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_TownCenter/UCX_SM_TownCenter/Area3D" index="0"]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, -5.92119e-16, 0, 5.92119e-16, 0.02, 0, -1.19209e-09, 0.01)
+shape = SubResource("BoxShape3D_p6oe1")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="1"]
+stream = ExtResource("4_u62fg")
+volume_db = -15.0
+
+[connection signal="body_entered" from="SM_TownCenter/UCX_SM_TownCenter/Area3D" to="." method="_on_area_3d_body_entered"]

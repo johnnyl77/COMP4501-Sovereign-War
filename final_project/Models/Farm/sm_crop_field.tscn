@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://djgnmsuhr4yfi"]
+
+[ext_resource type="PackedScene" uid="uid://drc0lxciisx4s" path="res://Models/Farm/SM_CropField.fbx" id="1_1bt8v"]
+[ext_resource type="Material" uid="uid://bm3xymyjefj4" path="res://Models/Farm/M_Props.tres" id="2_11i2r"]
+
+[node name="SM_CropField" instance=ExtResource("1_1bt8v")]
+
+[node name="SM_CropField" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_11i2r")
